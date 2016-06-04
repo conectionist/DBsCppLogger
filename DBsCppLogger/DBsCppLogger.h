@@ -26,7 +26,9 @@ namespace DBsCppLogger
 	{
 	public:
 		template<class T>
-		Logger& operator<<(const T &data);
+		Logger& operator<<(const T& data);
+
+		Logger& operator<<(const string& data);
 
 	protected:
 		virtual string GetLogLevel() = 0;
@@ -129,5 +131,11 @@ namespace DBsCppLogger
 	typedef DBsCppLogger::log_error error;
 	typedef DBsCppLogger::log_critical critical;
 #endif
+
+#define LOGD DBsCppLogger::log_debug() FUNC_NAME
+#define LOGI DBsCppLogger::log_info() FUNC_NAME
+#define LOGW DBsCppLogger::log_warning() FUNC_NAME
+#define LOGE DBsCppLogger::log_error() FUNC_NAME
+#define LOGC DBsCppLogger::log_critical() FUNC_NAME
 
 #endif //DBS_CPP_LOGGER

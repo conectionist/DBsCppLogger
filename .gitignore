@@ -32,3 +32,4 @@ Debug/
 Release/
 log.txt
 *.opensdf
+*.suo

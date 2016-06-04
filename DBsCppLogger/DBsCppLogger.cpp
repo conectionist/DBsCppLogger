@@ -8,6 +8,12 @@ namespace DBsCppLogger
 {
 #pragma region Logger
 
+	Logger& Logger::operator<<(const string& data)
+	{
+		m_stream << data.c_str();
+		return *this;
+	}
+
 	void Logger::WriteToLog()
 	{
 		LogWriter::getInstance().WriteToLog(m_stream.str(), GetLogLevel());
