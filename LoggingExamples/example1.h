@@ -32,6 +32,8 @@ void LogSomeStuff()
 	wstring ws = L"an std::wstring";
 	double e = 10e40;
 	Test t;
+	string multilineString =
+		"\n{\n\tname : john,\n\tage: 20\n}";
 
 	LOGD << "a debug message";
 	LOGI << "a info message";
@@ -45,6 +47,8 @@ void LogSomeStuff()
 	
 	LOGD << s;
 	LOGD << ws;
+
+	LOGD << "A multineline string: " << multilineString;
 
 	LOGD << "the current thread id: " << std::this_thread::get_id();
 
