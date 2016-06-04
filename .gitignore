@@ -26,3 +26,9 @@
 *.exe
 *.out
 *.app
+
+*.sdf
+Debug/
+Release/
+log.txt
+*.opensdf
